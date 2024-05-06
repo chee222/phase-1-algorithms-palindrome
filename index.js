@@ -1,6 +1,15 @@
-function isPalindrome(word) {
-  // Write your algorithm here
-}
+function isPalindrome(str) {
+    // Write your algorithm here
+    const sanitizedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const reversedStr = sanitizedStr.split('').reverse().join('');
+    return sanitizedStr === reversedStr;
+  }
+
+  console.log(isPalindrome('abba')); // true
+  console.log(isPalindrome('racecar')); // true
+  console.log(isPalindrome('a')); // true
+  console.log(isPalindrome('robot')); // false
+  console.log(isPalindrome('ab')); // false
 
 /* 
   Add your pseudocode here
